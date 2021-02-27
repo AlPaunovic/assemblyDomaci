@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap');
+
+:root {
+    --primary: #181818;
+    --secondary: #2651a8;
+    --white: #fff;
+    --gray: #585858;
+    --lightGray: #a2a2a2;
+    --fontFamily: 'Didact Gothic', sans-serif;
+    --fontSize: 16px;
+    --transition: 0.4s ease;
+    --padding: 80px 0;
+}
+
+/***********
+************
+basic style
+************
+***********/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fontFamily);
+    font-size: var(--fontSize);
+
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--secondary);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+.btnBlue {
+    background: var(--secondary);
+    border: none;
+    padding: 15px 20px;
+    color: var(--white);
+    text-transform: uppercase;
+    margin-top: 25px;
+    border-radius: 10px;
+    transition: var(--transition);
+}
+
+.btnBlue:hover {
+    background: var(--lightGray);
+    color: var(--secondary);
+    cursor: pointer;
+
+}
+
+.btnWhite {
+    background: var(--white);
+    border: none;
+    padding: 15px 20px;
+    color: var(--secondary);
+    text-transform: uppercase;
+    margin-top: 25px;
+    border-radius: 10px;
+    transition: var(--transition);
+}
+
+.btnWhite:hover {
+    background: var(--lightGray);
+    color: var(--white);
+    cursor: pointer;
+}
+
+/***********
+************
+header
+************
+***********/
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, .5),
+            rgba(0, 0, 0, .5)), url(img/header.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 90vh;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 80px 30px;
+}
+
+header nav ul {
+    display: flex;
+    align-items: center;
+}
+
+header nav ul a {
+    text-transform: uppercase;
+    color: var(--white);
+    margin-left: 30px;
+    letter-spacing: 1.1px;
+}
+
+header .active {
+    background: var(--secondary);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+header .logo {
+    color: var(--white);
+    font-size: 3rem;
+}
+
+header .active:hover {
+    background: var(--white);
+    color: var(--secondary);
+    transition: var(--transition);
+}
+
+header hgroup {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+
+header hgroup h1 {
+    color: var(--white);
+    font-size: 3.5rem;
+}
+
+header hgroup h4 {
+    color: var(--lightGray);
+    font-size: 1.3rem;
+    margin: 15px 0;
+}
+
+
+/***********
+************
+about
+************
+***********/
+
+.about {
+    padding: var(--padding);
+    text-align: center;
+
+}
+
+.about h2 {
+    font-size: 2.5rem;
+
+}
+
+.about h4 {
+    color: var(--lightGray);
+    font-size: 1.1rem;
+    margin: 15px 0;
+}
+
+.about .row {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+
+.about .row article {
+    flex: 0 0 33%;
+}
+
+.about .row .btnBlue {
+    margin-top: 50px;
+
+}
+
+/***********
+************
+contact
+************
+***********/
+.contact {
+    padding: var(--padding);
+    background-color: var(--secondary);
+    text-align: center;
+    color: var(--white);
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+}
+
+.contact h4 {
+    font-size: 1.1rem;
+    color: var(--lightGray);
+    margin-bottom: 40px;
+}
+
+.contact a:hover {
+    color: var(--lightGray);
+}
+
+.contact .btnWhite {
+    margin: 40px 0 50px 0;
+}
+
+/***********
+************
+footer
+************
+***********/
+footer {
+    background-color: var(--primary);
+    text-align: center;
+    height: 10vh;
+    padding: var(--padding);
+}
+
+footer a:hover {
+    color: var(--secondary);
+}
+
+/***********
+************
+responsive
+************
+***********/
+@media (max-width: 768px) {
+
+    .container {
+        width: 90%;
+    }
+
+    header nav {
+        flex-wrap: wrap;
+        padding: 30px 0;
+    }
+
+    header .logo {
+        font-size: 2rem;
+        margin: auto;
+
+    }
+
+    header nav ul {
+        display: flex;
+        align-items: center;
+        margin-top: 20px
+    }
+
+    header nav ul a {
+
+        margin-left: 15px;
+        letter-spacing: .3px;
+        font-size: .6rem;
+    }
+
+    header .active {
+        padding: 10px;
+
+    }
+
+    header hgroup h1 {
+        font-size: 1.7rem;
+    }
+
+    .about .row article {
+        flex: 0 0 100%;
+        margin-bottom: 30px;
+
+    }
+
+
+}
